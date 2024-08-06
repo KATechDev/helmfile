@@ -21,6 +21,8 @@ type ApplyOptions struct {
 	// TODO: Remove this function once Helmfile v0.x
 	// DEPRECATED: Use skip-cleanup instead
 	RetainValuesFiles bool
+	// DryRun to render your chart with or without a cluster connection
+	DryRun string
 
 	// SkipCleanup is true if the cleanup of temporary values files should be skipped
 	SkipCleanup bool
@@ -100,6 +102,11 @@ func (a *ApplyImpl) Concurrency() int {
 // Context returns the context.
 func (a *ApplyImpl) Context() int {
 	return a.ApplyOptions.Context
+}
+
+// DryRun returns the DryRun.
+func (a *ApplyImpl) DryRun() string {
+	return a.ApplyOptions.DryRun
 }
 
 // DetailedExitcode returns the detailed exitcode.

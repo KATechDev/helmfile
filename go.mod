@@ -33,6 +33,7 @@ require (
 )
 
 replace gopkg.in/yaml.v3 => github.com/colega/go-yaml-yaml v0.0.0-20220720070545-aaba007ebc22
+replace github.com/helmfile/chartify => github.com/KATechDev/chartify feat/add-dryrun
 
 require (
 	cloud.google.com/go v0.115.0 // indirect
