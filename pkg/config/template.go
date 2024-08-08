@@ -40,8 +40,8 @@ type TemplateOptions struct {
 	KubeVersion string
 	// Propagate '--show-only` to helm template
 	ShowOnly []string
-	// DryRun
-	DryRun string
+	// TemplateArgs
+	TemplateArgs string
 }
 
 // NewTemplateOptions creates a new Apply
@@ -147,7 +147,7 @@ func (t *TemplateImpl) ShowOnly() []string {
 	return t.TemplateOptions.ShowOnly
 }
 
-// DryRun returns the DryRun
-func (t *TemplateImpl) DryRun() string {
-	return t.TemplateOptions.DryRun
+// TemplateArgs returns the TemplateArgs
+func (t *TemplateImpl) TemplateArgs() string {
+	return t.TemplateOptions.TemplateArgs
 }

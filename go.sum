@@ -254,8 +254,8 @@ github.com/DopplerHQ/cli v0.5.11-0.20230908185655-7aef4713e1a4 h1:s7/zwMi5w+Knlu
 github.com/DopplerHQ/cli v0.5.11-0.20230908185655-7aef4713e1a4/go.mod h1:ipnA9Lpn5YM+FDSQZ7VWNjcuVurchInoGKm+v7O0sGs=
 github.com/HdrHistogram/hdrhistogram-go v1.1.2 h1:5IcZpTvzydCQeHzK4Ef/D5rrSqwxob0t8PQPMybUNFM=
 github.com/HdrHistogram/hdrhistogram-go v1.1.2/go.mod h1:yDgFjdqOqDEKOvasDdhWNXYg9BVp4O+o5f6V/ehm6Oo=
-github.com/KATechDev/chartify v0.1.0 h1:Ab6oEbibddPOxxjtYbksxgYy5xM++N0L+KriPp7pp2w=
-github.com/KATechDev/chartify v0.1.0/go.mod h1:VCchMNDuqcrcycfXzg5wKglOtvAjqoZBYbXkKhOn10A=
+github.com/KATechDev/chartify v0.1.1 h1:qSdYWiefQRO7eR+YNUfPS4UAOUlLTS+iNmWu7QvaKiU=
+github.com/KATechDev/chartify v0.1.1/go.mod h1:VCchMNDuqcrcycfXzg5wKglOtvAjqoZBYbXkKhOn10A=
 github.com/Masterminds/goutils v1.1.1 h1:5nUrii3FMTL5diU80unEVvNevw1nH4+ZV4DSLVJLSYI=
 github.com/Masterminds/goutils v1.1.1/go.mod h1:8cTjp+g8YejhMuvIA5y2vz3BpJxksy863GQaJW2MFNU=
 github.com/Masterminds/semver/v3 v3.2.0/go.mod h1:qvl/7zhW3nngYb5+80sSMF+FG2BjYrf8m9wsX0PNOMQ=

@@ -249,7 +249,7 @@ func (a *App) Template(c TemplateConfigProvider) error {
 			IncludeTransitiveNeeds: c.IncludeNeeds(),
 			Set:                    c.Set(),
 			KubeVersion:            c.KubeVersion(),
-			DryRun:                 c.DryRun(),
+			TemplateArgs:           c.TemplateArgs(),
 		}, func() {
 			ok, errs = a.template(run, c)
 		})
@@ -414,7 +414,7 @@ func (a *App) Apply(c ApplyConfigProvider) error {
 			Validate:               c.Validate(),
 			Concurrency:            c.Concurrency(),
 			IncludeTransitiveNeeds: c.IncludeNeeds(),
-			DryRun:                 c.DryRun(),
+			TemplateArgs:           c.TemplateArgs(),
 		}, func() {
 			matched, updated, es := a.apply(run, c)
 

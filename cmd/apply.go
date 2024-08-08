@@ -43,6 +43,7 @@ func NewApplyCmd(globalCfg *config.GlobalImpl) *cobra.Command {
 	f.BoolVar(&applyOptions.StripTrailingCR, "strip-trailing-cr", false, "strip trailing carriage return on input")
 	f.StringVar(&applyOptions.DiffArgs, "diff-args", "", `pass args to helm helm-diff`)
 	f.StringVar(&applyOptions.SyncArgs, "sync-args", "", `pass args to helm upgrade`)
+	f.StringVar(&applyOptions.TemplateArgs, "template-args", "", `pass args to helm template`)
 	f.StringVar(&globalCfg.GlobalOptions.Args, "args", "", "pass args to helm exec")
 	if !runtime.V1Mode {
 		// TODO: Remove this function once Helmfile v0.x
@@ -70,7 +71,6 @@ func NewApplyCmd(globalCfg *config.GlobalImpl) *cobra.Command {
 	f.StringArrayVar(&applyOptions.PostRendererArgs, "post-renderer-args", nil, `pass --post-renderer-args to "helm template" or "helm upgrade --install"`)
 	f.StringVar(&applyOptions.Cascade, "cascade", "", "pass cascade to helm exec, default: background")
 	f.StringArrayVar(&applyOptions.SuppressOutputLineRegex, "suppress-output-line-regex", nil, "a list of regex patterns to suppress output lines from the diff output")
-	f.StringVar(&applyOptions.DryRun, "dry-run", "", "dry-run as client or server passed to helm template")
 
 	return cmd
 }

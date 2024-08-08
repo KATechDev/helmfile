@@ -21,8 +21,6 @@ type ApplyOptions struct {
 	// TODO: Remove this function once Helmfile v0.x
 	// DEPRECATED: Use skip-cleanup instead
 	RetainValuesFiles bool
-	// DryRun to render your chart with or without a cluster connection
-	DryRun string
 
 	// SkipCleanup is true if the cleanup of temporary values files should be skipped
 	SkipCleanup bool
@@ -68,7 +66,9 @@ type ApplyOptions struct {
 	SuppressOutputLineRegex []string
 	// SyncArgs is the list of arguments to pass to helm upgrade.
 	SyncArgs string
-}
+	// TemplateArgsis the list of arguments to pass to helm template
+	TemplateArgs string
+}upgrade
 
 // NewApply creates a new Apply
 func NewApplyOptions() *ApplyOptions {
@@ -102,11 +102,6 @@ func (a *ApplyImpl) Concurrency() int {
 // Context returns the context.
 func (a *ApplyImpl) Context() int {
 	return a.ApplyOptions.Context
-}
-
-// DryRun returns the DryRun.
-func (a *ApplyImpl) DryRun() string {
-	return a.ApplyOptions.DryRun
 }
 
 // DetailedExitcode returns the detailed exitcode.
@@ -253,4 +248,9 @@ func (a *ApplyImpl) SuppressOutputLineRegex() []string {
 // SyncArgs returns the SyncArgs.
 func (a *ApplyImpl) SyncArgs() string {
 	return a.ApplyOptions.SyncArgs
+}
+
+// TemplateArgs returns the TemplateArgs.
+func (a *ApplyImpl) TemplateArgs() string {
+	return a.ApplyOptions.TemplateArgs
 }

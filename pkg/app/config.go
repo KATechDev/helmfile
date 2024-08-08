@@ -59,7 +59,6 @@ type ApplyConfigProvider interface {
 	SkipDeps() bool
 	Wait() bool
 	WaitForJobs() bool
-	DryRun() string
 
 	IncludeTests() bool
 
@@ -86,6 +85,7 @@ type ApplyConfigProvider interface {
 
 	DiffArgs() string
 	SyncArgs() string
+	TemplateArgs() string
 
 	DAGConfig
 
@@ -235,7 +235,7 @@ type TemplateConfigProvider interface {
 	IncludeCRDs() bool
 	KubeVersion() string
 	ShowOnly() []string
-	DryRun() string
+	TemplateArgs() string
 
 	DAGConfig
 
