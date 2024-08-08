@@ -68,7 +68,7 @@ type ApplyOptions struct {
 	SyncArgs string
 	// TemplateArgsis the list of arguments to pass to helm template
 	TemplateArgs string
-}upgrade
+}
 
 // NewApply creates a new Apply
 func NewApplyOptions() *ApplyOptions {
