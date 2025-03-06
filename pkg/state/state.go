@@ -1502,7 +1502,7 @@ type TemplateOpts struct {
 	ShowOnly          []string
 	// Propagate '--skip-schema-validation' to helmv3 template and helm install
 	SkipSchemaValidation bool
-	TemplateArgs      string
+	TemplateArgs         string
 }
 
 type TemplateOpt interface{ Apply(*TemplateOpts) }
